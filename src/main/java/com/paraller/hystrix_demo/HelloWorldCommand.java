@@ -53,22 +53,16 @@ public class HelloWorldCommand extends HystrixCommand<String> {
 
 	public static void main(String[] args) throws Exception {
 
-//		hystrixCommandDemo();
-//
-//		System.out.println("----------------------");
-//
-//		registerDemo();
-//		
-//		System.out.println("----------------------");
+		hystrixCommandDemo();
+
+		System.out.println("----------------------");
+
+		registerDemo();
 		
-		fallbackDemo();
+		System.out.println("----------------------");
+		
 	}
 
-	
-	static void fallbackDemo(){
-		HelloWorldCommand command = new HelloWorldCommand("test-Fallback");
-        String result = command.execute();
-	}
 	
 	static void hystrixCommandDemo() throws InterruptedException, ExecutionException, TimeoutException {
 
